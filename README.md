@@ -6,7 +6,10 @@ To install PyQt5 using pip3 run the following command:
 
 To start the creator just run the following commands from the root directory:
     1. Change current directory to 'python_modules':
-          cd /python_modules
+    
+            cd /python_module
+           
     2. Run creator.py:
-          python3 creator.py
+          
+            python3 creator.py
 
