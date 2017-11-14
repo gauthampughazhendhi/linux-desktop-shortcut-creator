@@ -1,0 +1,110 @@
+# -*- coding: utf-8 -*-
+
+# Form implementation generated from reading ui file 'creator.ui'
+#
+# Created by: PyQt5 UI code generator 5.9
+#
+# WARNING! All changes made in this file will be lost!
+
+from PyQt5 import QtCore, QtGui, QtWidgets
+
+class Ui_MainWindow(object):
+    def setupUi(self, MainWindow):
+        MainWindow.setObjectName("MainWindow")
+        MainWindow.resize(364, 460)
+        self.centralwidget = QtWidgets.QWidget(MainWindow)
+        self.centralwidget.setObjectName("centralwidget")
+        self.gridLayout = QtWidgets.QGridLayout(self.centralwidget)
+        self.gridLayout.setObjectName("gridLayout")
+        self.label_2 = QtWidgets.QLabel(self.centralwidget)
+        font = QtGui.QFont()
+        font.setPointSize(11)
+        self.label_2.setFont(font)
+        self.label_2.setObjectName("label_2")
+        self.gridLayout.addWidget(self.label_2, 8, 0, 1, 1)
+        self.label_3 = QtWidgets.QLabel(self.centralwidget)
+        font = QtGui.QFont()
+        font.setPointSize(11)
+        self.label_3.setFont(font)
+        self.label_3.setObjectName("label_3")
+        self.gridLayout.addWidget(self.label_3, 16, 0, 1, 1)
+        self.label = QtWidgets.QLabel(self.centralwidget)
+        font = QtGui.QFont()
+        font.setPointSize(11)
+        self.label.setFont(font)
+        self.label.setObjectName("label")
+        self.gridLayout.addWidget(self.label, 12, 0, 1, 1)
+        self.horizontalLayout_2 = QtWidgets.QHBoxLayout()
+        self.horizontalLayout_2.setObjectName("horizontalLayout_2")
+        self.exec_path = QtWidgets.QLineEdit(self.centralwidget)
+        self.exec_path.setObjectName("exec_path")
+        self.horizontalLayout_2.addWidget(self.exec_path)
+        self.exec_button = QtWidgets.QPushButton(self.centralwidget)
+        self.exec_button.setObjectName("exec_button")
+        self.horizontalLayout_2.addWidget(self.exec_button)
+        self.gridLayout.addLayout(self.horizontalLayout_2, 18, 0, 1, 2)
+        self.horizontalLayout = QtWidgets.QHBoxLayout()
+        self.horizontalLayout.setObjectName("horizontalLayout")
+        self.icon_path = QtWidgets.QLineEdit(self.centralwidget)
+        self.icon_path.setObjectName("icon_path")
+        self.horizontalLayout.addWidget(self.icon_path)
+        self.icon_button = QtWidgets.QPushButton(self.centralwidget)
+        self.icon_button.setObjectName("icon_button")
+        self.horizontalLayout.addWidget(self.icon_button)
+        self.gridLayout.addLayout(self.horizontalLayout, 13, 0, 1, 2)
+        self.horizontalLayout_3 = QtWidgets.QHBoxLayout()
+        self.horizontalLayout_3.setObjectName("horizontalLayout_3")
+        self.app_name = QtWidgets.QLineEdit(self.centralwidget)
+        self.app_name.setObjectName("app_name")
+        self.horizontalLayout_3.addWidget(self.app_name)
+        self.gridLayout.addLayout(self.horizontalLayout_3, 11, 0, 1, 2)
+        self.label_5 = QtWidgets.QLabel(self.centralwidget)
+        font = QtGui.QFont()
+        font.setPointSize(11)
+        self.label_5.setFont(font)
+        self.label_5.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_5.setObjectName("label_5")
+        self.gridLayout.addWidget(self.label_5, 6, 0, 1, 2)
+        self.create = QtWidgets.QPushButton(self.centralwidget)
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        self.create.setFont(font)
+        self.create.setObjectName("create")
+        self.gridLayout.addWidget(self.create, 19, 1, 1, 1)
+        self.horizontalLayout_4 = QtWidgets.QHBoxLayout()
+        self.horizontalLayout_4.setObjectName("horizontalLayout_4")
+        self.label_4 = QtWidgets.QLabel(self.centralwidget)
+        self.label_4.setText("")
+        self.label_4.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_4.setObjectName("label_4")
+        self.horizontalLayout_4.addWidget(self.label_4)
+        self.gridLayout.addLayout(self.horizontalLayout_4, 20, 0, 1, 2)
+        self.type = QtWidgets.QComboBox(self.centralwidget)
+        self.type.setObjectName("type")
+        self.gridLayout.addWidget(self.type, 7, 0, 1, 2)
+        MainWindow.setCentralWidget(self.centralwidget)
+
+        self.retranslateUi(MainWindow)
+        QtCore.QMetaObject.connectSlotsByName(MainWindow)
+
+    def retranslateUi(self, MainWindow):
+        _translate = QtCore.QCoreApplication.translate
+        MainWindow.setWindowTitle(_translate("MainWindow", "Desktop Shortcut Creator"))
+        self.label_2.setText(_translate("MainWindow", "Application name"))
+        self.label_3.setText(_translate("MainWindow", "Executable path"))
+        self.label.setText(_translate("MainWindow", "Icon path"))
+        self.exec_button.setText(_translate("MainWindow", "Browse..."))
+        self.icon_button.setText(_translate("MainWindow", "Browse..."))
+        self.label_5.setText(_translate("MainWindow", "Type"))
+        self.create.setText(_translate("MainWindow", "Create"))
+
+
+if __name__ == "__main__":
+    import sys
+    app = QtWidgets.QApplication(sys.argv)
+    MainWindow = QtWidgets.QMainWindow()
+    ui = Ui_MainWindow()
+    ui.setupUi(MainWindow)
+    MainWindow.show()
+    sys.exit(app.exec_())
+
