@@ -2,7 +2,7 @@ import sys
 import os
 import subprocess
 from PyQt5 import QtGui, QtCore, QtWidgets
-from python_modules.creator_gui import Ui_MainWindow
+from creator_gui import Ui_MainWindow
 
 
 class Creator(Ui_MainWindow):
@@ -40,9 +40,10 @@ class Creator(Ui_MainWindow):
         app_type = str(self.type.currentText())
         name = str(self.app_name.text())
         icon_path = str(self.icon_path.text())
+        app_class = str(self.app_class.text())
         exec_path = str(self.exec_path.text())
 
-        if not app_type or not name or not exec_path:
+        if not app_type or not name or not exec_path or not app_class:
             self.label_4.setText('Fill all the fields.')
         else:
             os.chdir('/usr/local/share/applications/')
@@ -55,14 +56,15 @@ class Creator(Ui_MainWindow):
                 file.write('Terminal=true\n')
             file.write('Name=' + name + '\n')
             file.write('Icon=' + icon_path + '\n')
-            file.write('Exec=' + exec_path)
+            file.write('Exec=' + exec_path + '\n')
+            file.write('StartupWMClass=' + app_class)
             file.close()
 
             self.label_4.setText('Shortcut created successfully.')
             self.app_name.clear()
+            self.app_class.clear()
             self.icon_path.clear()
             self.exec_path.clear()
-
 
 
 if __name__ == '__main__':
